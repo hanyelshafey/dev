@@ -1,0 +1,10 @@
+<h1>posts list</h1>
+
+{%for aha in postlist%}:
+    <a href="{% url 'post:onepost' aha.id %}">   {{aha}} </a>
+
+{% endfor %}
+
+
+
+<a href="{% url 'post:new'  %}">  add new post </a>
