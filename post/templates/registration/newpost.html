@@ -1,7 +1,9 @@
 <h1>new post</h1>
 
-<form method="POST" enctype="multipart/form-data">{{form}}
+<form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
+
+    {{form}}
 
     <input type="submit" value="new ">
 </form>

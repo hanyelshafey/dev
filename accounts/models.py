@@ -1,15 +1,10 @@
 from django.db import models
-from django.utils import timezone
 
 # Create your models here.
+class Profile (models.Model):
 
-class Post (models.Model):
-
-    title=models.CharField(max_length=50)
-    content=models.TextField(max_length=500)
+    name=models.CharField(max_length=50)
     imag=models.ImageField(null = True ,upload_to = 'posts/')
-    publish=models.DateTimeField(default=timezone.now)
-    views=models.IntegerField(default=0)
     author=models.CharField(max_length=100)
 
     def __str__(self):
